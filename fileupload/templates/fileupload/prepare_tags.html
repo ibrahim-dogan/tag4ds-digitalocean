@@ -1,0 +1,36 @@
+{% extends 'fileupload/base.html' %}
+{% block content %}
+
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">{{ file.name }} - Taglerini Belirle </h5>
+        </div>
+        <div class="card-body">
+
+            <p class="card-text">Lütfen aşağıdan taglerinizi sırayla giriniz. Taglerinizi ekledikten sonra ilerle
+                butonuna basarak işleminize devam edebilirsiniz.</p>
+
+            <form class="form-inline" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input class="form-control form-control-md" type="text" name="tag">
+                &nbsp;
+                <button class="btn btn-primary" type="submit">Tag Ekle</button>
+            </form>
+            <br>
+            <h5>Eklediğiniz Tagler</h5>
+            {% if tags %}
+                {% for tag in tags %}
+                    <p class="btn btn-success">{{ tag }}
+                    </p>
+                {% endfor %}
+                <br>
+                <a href="?finish=True" class="btn btn-danger float-right">İlerle (Tüm tagleri eklediğinizden emin
+                    olun)</a>
+            {% else %}
+                <p class="card-text">Henüz hiç tag eklemediniz</p>
+            {% endif %}
+
+        </div>
+    </div>
+
+{% endblock %}

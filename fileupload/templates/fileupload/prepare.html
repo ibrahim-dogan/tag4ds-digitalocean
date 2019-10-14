@@ -1,0 +1,16 @@
+{% extends 'fileupload/base.html' %}
+{% block content %}
+    <div>
+        Dosya Adi: {{ file.name }} <br>
+        Dosyadan Ornek Satir: <br> {{ first_row }}<br><br>
+        Output dosyasinda kullanmayacaginiz alanlarin isaretini kaldirabilirsiniz. <br>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for first_row_key in first_row_keys %}
+                <input type="checkbox" name="keys" value="{{ first_row_key }}" checked> {{ first_row_key }}<br>
+            {% endfor %}
+            <button type="submit">Ilerle</button>
+        </form>
+
+    </div>
+{% endblock %}

@@ -25,7 +25,7 @@ SECRET_KEY = 'ca^fuqjbq@10lcy6+^63%hodbfjp0ai$=zg7bovnipx22%#0uz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'datasciencetag.pythonanywhere.com','127.0.0.1']
+ALLOWED_HOSTS = ['157.245.244.238']
 
 
 # Application definition

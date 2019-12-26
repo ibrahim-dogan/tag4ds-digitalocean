@@ -25,7 +25,7 @@ SECRET_KEY = 'ca^fuqjbq@10lcy6+^63%hodbfjp0ai$=zg7bovnipx22%#0uz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['157.245.244.238']
+ALLOWED_HOSTS = ['64.225.72.217']
 
 
 # Application definition
@@ -124,9 +124,9 @@ STATIC_URL = '/static/'
 
 # default static files settings for PythonAnywhere.
 # see https://help.pythonanywhere.com/pages/DjangoStaticFiles for more info
-MEDIA_ROOT = u'/home/datasciencetag/mysite/media'
+MEDIA_ROOT = u'/home/tag4ds-digitalocean/mysite/media'
 MEDIA_URL = '/media/'
-STATIC_ROOT = u'/home/datasciencetag/mysite/static'
+STATIC_ROOT = u'/home/tag4ds-digitalocean/mysite/static'
 STATIC_URL = '/static/'
 
 TRACK_PAGEVIEWS = True

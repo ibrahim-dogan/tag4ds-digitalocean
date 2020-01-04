@@ -7,5 +7,6 @@ urlpatterns = [
     path('prepare/<int:id>', views.prepare_tags, name='prepare_tags'),
     path('tag-process/<int:id>/<int:row>', views.tag_process, name='tag_process'),
     path('download/<int:id>', views.download, name='download'),
+    path('download-all/<int:id>', views.download_all, name='download_all'),
     path('validate/<int:id>', views.validate, name='validate')
 ]

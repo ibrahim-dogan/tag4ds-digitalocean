@@ -102,6 +102,15 @@ def download(request, id):
     return response
 
 
+def download_all(request, id):
+    file = get_object_or_404(JsonFile, id=id)
+    data = json.loads(file.json)
+    data = json.dumps(data, indent=1, ensure_ascii=False)
+    response = HttpResponse(data, content_type='application/json')
+    response['Content-Disposition'] = 'attachment; filename=' + 'all_' +file.name
+    return response
+
+
 def validate(request, id):
     file = get_object_or_404(JsonFile, id=id)
     tag_counts = {}
